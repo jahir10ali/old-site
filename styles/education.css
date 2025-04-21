@@ -44,7 +44,7 @@
     opacity: 0.8;
   }
   
-  /* Long details (hidden by default) */
+  /* Main toggle content (hidden by default) */
   .edu-details {
     display: none;
     margin-top: 1rem;
@@ -59,6 +59,46 @@
     display: block;
   }
   
+  /* Year buttons (inside toggle) */
+  .year-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .year-btn {
+    background: transparent;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: fit-content;
+    transition: background 0.2s, transform 0.1s;
+  }
+  
+  .year-btn:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+    transform: scale(1.05);
+  }
+  
+  .year-detail {
+    display: none;
+    margin-top: 1rem;
+    border-left: 2px dashed #00ff00;
+    padding-left: 1rem;
+    color: #00ff00;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .year-detail.active {
+    display: block;
+  }
+  
   /* Responsive enhancements */
   @media (min-width: 600px) {
     .edu-header {
@@ -66,7 +106,8 @@
     }
   
     .edu-summary,
-    .edu-details {
+    .edu-details,
+    .year-detail {
       font-size: 1rem;
     }
   }
