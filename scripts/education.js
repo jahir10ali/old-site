@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+(() => {
     const toggles = document.querySelectorAll(".edu-header");
     toggles.forEach(btn => {
       btn.addEventListener("click", () => {
@@ -8,5 +8,5 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.querySelector(".arrow").classList.toggle("open");
       });
     });
-  });
+  })();
   
