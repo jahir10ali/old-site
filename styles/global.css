@@ -63,7 +63,7 @@
   
   /* === CONTENT SECTION === */
   section {
-    max-width: 800px;
+    max-width: 80%;
     width: 100%;
     padding: 1rem;
     margin: 0 auto;
@@ -99,7 +99,7 @@
     margin-bottom: 1rem;
   }
 
-  
+
   
   /* === RESPONSIVE === */
   @media (min-width: 600px) {
