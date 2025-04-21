@@ -19,7 +19,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* Remove align-items: center to stop vertical centering */
   }
   
   /* === HEADER TITLE === */
@@ -42,7 +42,7 @@
   .nav-buttons {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;         /* horizontal centering for column layout */
     justify-content: center;
     gap: 0.5rem;
     margin-bottom: 2rem;
@@ -70,6 +70,7 @@
     max-width: 800px;
     width: 100%;
     padding: 1rem;
+    margin: 0 auto;
   }
   
   #content {
@@ -117,6 +118,7 @@
     .nav-buttons {
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: center;  /* center buttons on larger screens */
     }
   
     button {
