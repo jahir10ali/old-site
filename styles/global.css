@@ -17,33 +17,35 @@
     line-height: 1.5;
     padding: 1rem;
     min-height: 100vh;
-  }
-  
-  /* === SECTION LAYOUT === */
-  section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  
-  /* Hide sections by default for transitions */
-  #content {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-  
-  #content.active {
-    display: block;
-    opacity: 1;
-  }
-  
-  /* === TERMINAL-STYLE BUTTONS === */
-  nav {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  
+  /* === HEADER TITLE === */
+  .site-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .site-header h1 {
+    font-size: 1.5rem;
+    color: #00ff00;
+  }
+  
+  .site-header .handle {
+    color: #00cc88;
+    font-weight: normal;
+  }
+  
+  /* === NAVIGATION BUTTONS === */
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
   
   button {
@@ -63,6 +65,24 @@
     transform: scale(1.05);
   }
   
+  /* === CONTENT SECTION === */
+  section {
+    max-width: 800px;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  #content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  #content.active {
+    display: block;
+    opacity: 1;
+  }
+  
   /* === TYPOGRAPHY === */
   h1 {
     font-size: 2rem;
@@ -74,7 +94,13 @@
     margin-bottom: 1rem;
   }
   
-  /* === RESPONSIVE LAYOUT === */
+  ul {
+    list-style-type: square;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* === RESPONSIVE === */
   @media (min-width: 600px) {
     body {
       padding: 2rem;
@@ -88,10 +114,9 @@
       font-size: 2.5rem;
     }
   
-    nav {
+    .nav-buttons {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: flex-start;
     }
   
     button {
@@ -99,7 +124,7 @@
     }
   }
   
-  /* === FADE TRANSITION CLASSES === */
+  /* === TRANSITIONS === */
   .fade-in {
     animation: fadeIn 0.4s ease forwards;
   }
