@@ -15,6 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
           content.innerHTML = html;
           content.classList.add("active");
           window.scrollTo(0, 0);
+
+          // If it's the education section, load its script
+          if (section === "education") {
+              const script = document.createElement("script");
+              script.src = "scripts/education.js";
+              script.defer = true;
+              document.body.appendChild(script);
+          }
         })
         .catch(error => {
           content.innerHTML = `<p>Error loading section: ${error.message}</p>`;

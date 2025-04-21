@@ -38,14 +38,3 @@
   </div>
 
 </section>
-
-<script>
-  // Simple JS to handle toggles
-  document.querySelectorAll('.edu-header').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = document.getElementById(btn.dataset.toggle);
-      target.classList.toggle('active');
-      btn.querySelector('.arrow').classList.toggle('open');
-    });
-  });
-</script>
