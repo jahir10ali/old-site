@@ -1,0 +1,73 @@
+/* Terminal-style education section */
+.edu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  /* Header toggle */
+  .edu-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .edu-header:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .arrow.open {
+    transform: rotate(90deg);
+  }
+  
+  /* Short summary (always visible) */
+  .edu-summary {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    color: #00ff00;
+    opacity: 0.8;
+  }
+  
+  /* Long details (hidden by default) */
+  .edu-details {
+    display: none;
+    margin-top: 1rem;
+    border-left: 2px solid #00ff00;
+    padding-left: 1rem;
+    color: #00ff00;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .edu-details.active {
+    display: block;
+  }
+  
+  /* Responsive enhancements */
+  @media (min-width: 600px) {
+    .edu-header {
+      font-size: 1.1rem;
+    }
+  
+    .edu-summary,
+    .edu-details {
+      font-size: 1rem;
+    }
+  }
+  

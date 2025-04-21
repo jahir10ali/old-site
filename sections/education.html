@@ -1,23 +1,49 @@
-<h1>Education</h1>
-<p>
-  <strong>Royal Holloway, University of London</strong><br>
-  BSc Computer Science
-</p>
-<h2>Year 1 Modules:</h2>
-<ul>
-  <li>Object-Oriented Programming I & II</li>
-  <li>Programming Laboratory</li>
-  <li>Internet Services</li>
-  <li>Mathematical Structures</li>
-  <li>Machine Fundamentals</li>
-  <li>Software Design</li>
-</ul>
-<h2>Year 2 Modules:</h2>
-<ul>
-  <li>Software Engineering</li>
-  <li>Team Project</li>
-  <li>Operating Systems</li>
-  <li>Databases</li>
-  <li>Algorithms and Complexity</li>
-  <li>Introduction to Information Security</li>
-</ul>
+<link rel="stylesheet" href="styles/education.css" />
+
+<section class="edu-section">
+
+  <div class="edu-toggle">
+    <button class="edu-header" data-toggle="bsc">
+      <span class="arrow">&gt;</span>
+      <span class="title">Computer Science BSc @ Royal Holloway, University of London (2023–2026)</span>
+    </button>
+    <p class="edu-summary">A 3-year undergraduate degree focused on programming, systems, and software engineering.</p>
+    <div class="edu-details" id="bsc">
+      <p>This course covers a wide range of computing topics including software engineering, algorithms, machine learning, and cybersecurity. Students also participate in team projects and industry-focused modules. Excellent facilities and a research-driven curriculum provide a strong foundation for a future in tech.</p>
+    </div>
+  </div>
+
+  <div class="edu-toggle">
+    <button class="edu-header" data-toggle="alevels">
+      <span class="arrow">&gt;</span>
+      <span class="title">College – A-Levels</span>
+    </button>
+    <p class="edu-summary">Focused on STEM subjects with a passion for computing and logic.</p>
+    <div class="edu-details" id="alevels">
+      <p>Studied Mathematics, Computer Science, and Physics. Developed strong analytical and programming skills through coursework, practical labs, and problem-solving assignments. Worked on small projects and participated in local coding competitions.</p>
+    </div>
+  </div>
+
+  <div class="edu-toggle">
+    <button class="edu-header" data-toggle="gcse">
+      <span class="arrow">&gt;</span>
+      <span class="title">High School – GCSEs</span>
+    </button>
+    <p class="edu-summary">Built a solid academic foundation across science, maths, and tech subjects.</p>
+    <div class="edu-details" id="gcse">
+      <p>Completed GCSEs in a range of subjects including Computer Science, Maths, English, and Sciences. Demonstrated early interest in technology through coursework and extracurricular IT projects.</p>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  // Simple JS to handle toggles
+  document.querySelectorAll('.edu-header').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.getElementById(btn.dataset.toggle);
+      target.classList.toggle('active');
+      btn.querySelector('.arrow').classList.toggle('open');
+    });
+  });
+</script>
